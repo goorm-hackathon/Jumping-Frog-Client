@@ -6,5 +6,5 @@ export const theme: DefaultTheme = {
   checkBoxColor: "#22b8cf",
   cardColor: "white",
   boardColor: "#DADFE9",
-  warnColor: "#FF0000"
+  warnColor: "#FF0000",
 };
