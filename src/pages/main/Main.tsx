@@ -1,7 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 const Main = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/register');
+  };
   return (
     <MainWrapper>
       <MainImgContainer>
@@ -17,7 +22,9 @@ const Main = () => {
         여기에 워딩이 3~4줄 적으면 괜찮 <br />
       </MainSubTitle>
       <MainNextContainer>
-        <MainNextButton type="button">시작하기</MainNextButton>
+        <MainNextButton onClick={handleClick} type="button">
+          시작하기
+        </MainNextButton>
       </MainNextContainer>
     </MainWrapper>
   );
@@ -31,12 +38,11 @@ const MainLogoContainer = styled.div`
   margin-bottom: 16px;
   text-align: center;
 `;
-const MainImgContainer = styled.div`
-  margin-top: 50px;
-`;
+const MainImgContainer = styled.div``;
 const MainNextButton = styled.button`
   width: 100%;
   font-size: 18px;
+  margin-bottom: 20px;
   line-height: 26px;
   font-weight: 500;
   border: none;
