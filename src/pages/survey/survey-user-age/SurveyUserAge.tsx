@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import Card from '../../../components/Card';
+import SurveyTitle from '../../../components/SurveyTitle';
 
 const SurveyUserAge = () => {
   const path = '/survey/interest';
   return (
     <UserAgeContainer>
-      <UserAgeTitle>나이를 입력해주세요</UserAgeTitle>
+      <SurveyTitle content="나이를 입력해주세요" />
       <Card title="중학생" path={path} />
       <Card title="고등학생" path={path} />
       <Card title="대학 재학중" path={path} />
@@ -19,10 +20,3 @@ const SurveyUserAge = () => {
 export default SurveyUserAge;
 
 const UserAgeContainer = styled.div``;
-const UserAgeTitle = styled.h3`
-  margin-top: 31.68px;
-  font-size: 13px;
-  text-align: center;
-  opacity: 50%;
-  margin-bottom: 40px;
-`;
