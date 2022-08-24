@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Layout from './components/Layout';
 import End from './pages/end/End';
 import Main from './pages/main/Main';
 import Register from './pages/register/Register';
@@ -13,12 +15,14 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/survey/userinfo" element={<SurveyUserInfo />} />
-        <Route path="/survey/interest" element={<SurveyInteresting />} />
-        <Route path="/survey/job" element={<SurveyJob />} />
-        <Route path="/survey/market" element={<SurveyMarket />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/end" element={<End />} />
+        <Route element={<Layout />}>
+          <Route path="/survey/userinfo" element={<SurveyUserInfo />} />
+          <Route path="/survey/interest" element={<SurveyInteresting />} />
+          <Route path="/survey/job" element={<SurveyJob />} />
+          <Route path="/survey/market" element={<SurveyMarket />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/end" element={<End />} />
+        </Route>
       </Routes>
     </Router>
   );
