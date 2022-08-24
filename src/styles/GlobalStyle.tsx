@@ -10,22 +10,11 @@ const GlobalStyle = styled.createGlobalStyle`
   * {
     box-sizing: border-box;
   }
-  body {
-    background-color: #f5f5f5;
-    left: 50%;
-    top: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-  }
 
   #root {
     width: 432px;
-    height: 80vh;
     margin: 0 auto;
     padding: 0 16px;
-    background-color: white;
-    box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
-    border-radius: 20px;
   }
 `;
 
