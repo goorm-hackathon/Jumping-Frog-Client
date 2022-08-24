@@ -1,7 +1,16 @@
 import React from 'react';
+import Card from '../../../components/Card';
+import SurveyTitle from '../../../components/SurveyTitle';
 
 const SurveyUserGender = () => {
-  return <div>유저 성별 체크</div>;
+  const path = '/survey/interest';
+  return (
+    <>
+      <SurveyTitle content="성별을 입력해주세요" />
+      <Card title="남자" path={path} />
+      <Card title="여자" path={path} />
+    </>
+  );
 };
 
 export default SurveyUserGender;
