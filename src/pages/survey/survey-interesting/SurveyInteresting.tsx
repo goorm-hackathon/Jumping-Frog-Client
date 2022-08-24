@@ -1,7 +1,7 @@
 import React from "react";
 
 const SurveyInteresting = () => {
-  return <div>Interesting</div>
-}
+  return <div>info</div>;
+};
 
 export default SurveyInteresting;
