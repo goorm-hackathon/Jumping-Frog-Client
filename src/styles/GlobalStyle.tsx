@@ -10,6 +10,14 @@ const GlobalStyle = styled.createGlobalStyle`
   * {
     box-sizing: border-box;
   }
+  body {
+  }
+
+  #root {
+    width: 432px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
 `;
 
 export default GlobalStyle;
