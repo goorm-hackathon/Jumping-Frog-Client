@@ -20,7 +20,7 @@ const GlobalStyle = styled.createGlobalStyle`
 
   #root {
     width: 432px;
-    height: 792px;
+    height: 80vh;
     margin: 0 auto;
     padding: 0 16px;
     background-color: white;
