@@ -1,10 +1,10 @@
-import { DefaultTheme } from "styled-components";
+import { DefaultTheme } from 'styled-components';
 
 export const theme: DefaultTheme = {
-  bgColor: "#e9ecef",
-  btnColor: "#22b8cf",
-  checkBoxColor: "#22b8cf",
-  cardColor: "white",
-  boardColor: "#DADFE9",
-  warnColor: "#FF0000",
+  bgColor: '#e9ecef',
+  btnColor: '#22b8cf',
+  checkBoxColor: '#22b8cf',
+  cardColor: 'white',
+  boardColor: '#DADFE9',
+  warnColor: '#FF0000',
 };

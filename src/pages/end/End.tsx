@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const End = () => {
-  return <div>End</div>
-}
+  return <div>End</div>;
+};
 
 export default End;

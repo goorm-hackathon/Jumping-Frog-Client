@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const SurveyMarket = () => {
-  return <div>Market</div>
-}
+  return <div>Market</div>;
+};
 
 export default SurveyMarket;

@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const SurveyUserInfo = () => {
-  return <div>User Info</div>
-}
+  return <div>User Info</div>;
+};
 
-export default SurveyUserInfo
+export default SurveyUserInfo;

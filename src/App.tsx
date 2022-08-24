@@ -1,12 +1,12 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import End from "./pages/end/End";
-import Main from "./pages/main/Main";
-import Register from "./pages/register/Register";
-import SurveyInteresting from "./pages/survey/survey-interesting/SurveyInteresting";
-import SurveyJob from "./pages/survey/survey-job/SurveyJob";
-import SurveyMarket from "./pages/survey/survey-market/SurveyMarket";
-import SurveyUserInfo from "./pages/survey/survey-userinfo/SurveyUserInfo";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import End from './pages/end/End';
+import Main from './pages/main/Main';
+import Register from './pages/register/Register';
+import SurveyInteresting from './pages/survey/survey-interesting/SurveyInteresting';
+import SurveyJob from './pages/survey/survey-job/SurveyJob';
+import SurveyMarket from './pages/survey/survey-market/SurveyMarket';
+import SurveyUserInfo from './pages/survey/survey-userinfo/SurveyUserInfo';
 
 function App() {
   return (

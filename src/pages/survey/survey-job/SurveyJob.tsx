@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const SurveyJob = () => {
-  return <div>Job</div>
-}
+  return <div>Job</div>;
+};
 
 export default SurveyJob;
