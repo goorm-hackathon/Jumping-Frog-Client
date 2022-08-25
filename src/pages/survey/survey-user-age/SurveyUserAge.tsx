@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import Card from '../../../components/Card';
+import Progress from '../../../components/ProgressBar';
 import SurveyTitle from '../../../components/SurveyTitle';
 
 const SurveyUserAge = () => {
-  const path = '/survey/interest';
+  const path = '/survey/gender';
   return (
     <UserAgeContainer>
+      <Progress percent={0} />
       <SurveyTitle content="나이를 입력해주세요" />
       <Card title="중학생" path={path} />
       <Card title="고등학생" path={path} />

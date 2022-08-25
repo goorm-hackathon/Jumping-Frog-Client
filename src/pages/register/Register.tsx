@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useForm } from 'react-hook-form';
 import { regEmail } from '../../utils/regex';
+import Progress from '../../components/ProgressBar';
 
 interface IForm {
   name: string;
@@ -22,6 +23,7 @@ const Register = () => {
 
   return (
     <Container>
+      <Progress percent={100} />
       <Form onSubmit={handleSubmit(onVaild)}>
         <Title>이름을 알려주세요:)</Title>
         <Input
