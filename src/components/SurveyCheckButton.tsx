@@ -1,10 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const SurveyCheckButton = ({ content }: { content: string }) => {
+const SurveyCheckButton = ({
+  content,
+  key,
+}: {
+  content: string;
+  key: number;
+}) => {
+  const [isChecked, setIsChecked] = useState<boolean[]>([
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
+
+  const handleOnChange = (position: number) => {
+    console.log(key, position);
+
+    const updatedCheckedState = isChecked.map((item, key) => {
+      return key === position ? !item : item;
+    });
+
+    setIsChecked(updatedCheckedState);
+    console.log(isChecked);
+  };
+
   return (
     <SurveyInterestButtonContainer>
-      <SurveyInterestButton type="checkbox" name="content" />
+      <SurveyInterestButton
+        type="checkbox"
+        name="content"
+        checked={isChecked[key]}
+        onChange={() => handleOnChange(key)}
+      />
       <SurveyInterestLable htmlFor="content">{content}</SurveyInterestLable>
     </SurveyInterestButtonContainer>
   );

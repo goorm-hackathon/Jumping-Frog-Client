@@ -35,7 +35,6 @@ const Register = () => {
       name,
       email,
     });
-    console.log(userData);
   };
 
   return (
