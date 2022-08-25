@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Main = () => {
   const navigate = useNavigate();
+
   const handleClick = () => {
     navigate('/survey/age');
   };
