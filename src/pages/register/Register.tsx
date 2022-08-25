@@ -146,6 +146,8 @@ const SubmitButton = styled.button`
   background-color: ${({ theme }) => theme.mainColor};
   border: none;
   border-radius: 4px;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
   cursor: pointer;
   &:hover {
     opacity: 0.85;
