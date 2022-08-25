@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import useModal from './hooks/useModal';
 import Home from './pages/home/Home';
+import Information from './pages/information/Infomation';
 import Main from './pages/main/Main';
 import NotFound from './pages/NotFound';
 import Register from './pages/register/Register';
@@ -26,6 +27,7 @@ function App() {
           <Route path="/survey/job" element={<SurveyJob />} />
           <Route path="/survey/market" element={<SurveyMarket />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/information" element={<Information />} />
         </Route>
         <Route path={'*'} element={<NotFound />} />
       </Routes>
