@@ -20,11 +20,6 @@ const Main = () => {
         10대 제주도민을 위한 맞춤형 <br />
         커리어 성장 뉴스레터 서비스
       </MainTitle>
-      <MainSubTitle>
-        여기에 워딩이 3~4줄 적으면 괜찮 <br />
-        여기에 워딩이 3~4줄 적으면 괜찮 <br />
-        여기에 워딩이 3~4줄 적으면 괜찮 <br />
-      </MainSubTitle>
       <MainNextContainer>
         <MainNextButton onClick={handleClick} type="button">
           시작하기
@@ -36,7 +31,9 @@ const Main = () => {
 
 export default Main;
 
-const MainWrapper = styled.div``;
+const MainWrapper = styled.div`
+  margin-top: 20px;
+`;
 const MainLogoContainer = styled.div`
   margin-top: 66px;
   margin-bottom: 16px;
@@ -69,11 +66,5 @@ const MainTitle = styled.h1`
   color: #f69183;
   font-family: Abhaya Libre SemiBold;
   text-align: center;
-`;
-const MainSubTitle = styled.p`
-  text-align: center;
-  color: #000000;
-  opacity: 40%;
-  margin-top: 38px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 `;
