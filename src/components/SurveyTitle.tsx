@@ -9,7 +9,7 @@ export default SurveyTitle;
 
 const SurveyContent = styled.h3`
   margin-top: 31.68px;
-  font-size: 13px;
+  font-size: 16px;
   text-align: center;
   opacity: 50%;
   margin-bottom: 40px;
