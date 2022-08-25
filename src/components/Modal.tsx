@@ -34,9 +34,11 @@ const Modal = ({
 
   // 모달 자동 제거
   useEffect(() => {
-    setTimeout(() => {
-      setModalState(null);
-    }, timeout);
+    if (timeout) {
+      setTimeout(() => {
+        setModalState(null);
+      }, timeout);
+    }
   }, [timeout]);
 
   return (
