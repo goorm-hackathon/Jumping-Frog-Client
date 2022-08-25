@@ -17,4 +17,7 @@ const SurveyPointButton = styled.button`
   font-weight: 600;
   cursor: pointer;
   border-radius: 12px;
+  &:hover {
+    background-color: gray;
+  }
 `;
