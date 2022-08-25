@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import useModal from './hooks/useModal';
+import Home from './pages/home/Home';
 import Main from './pages/main/Main';
 import NotFound from './pages/NotFound';
 import Register from './pages/register/Register';
@@ -16,7 +17,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/main" element={<Main />} />
         <Route element={<Layout />}>
           <Route path="/survey/age" element={<SurveyUserAge />} />
           <Route path="/survey/gender" element={<SurveyUserGender />} />
