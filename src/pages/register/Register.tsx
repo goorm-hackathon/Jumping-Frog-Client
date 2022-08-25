@@ -124,12 +124,13 @@ const Title = styled.div`
 
 const Input = styled.input`
   height: 52px;
-  width: 342px;
+  width: 400px;
   font-size: 24px;
   padding-left: 10px;
   border-radius: 10px;
   background-color: rgb(246, 244, 238);
   border: 2px solid rgb(246, 244, 238);
+  text-align: center;
 `;
 
 const ErrorMessage = styled.span`
@@ -141,7 +142,7 @@ const ErrorMessage = styled.span`
 const SubmitButton = styled.button`
   margin-top: 50px;
   height: 52px;
-  width: 342px;
+  width: 400px;
   font-size: 18px;
   background-color: ${({ theme }) => theme.mainColor};
   border: none;
