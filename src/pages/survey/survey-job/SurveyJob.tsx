@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSetRecoilState } from 'recoil';
 import PointButton from '../../../components/PointButton';
 import Progress from '../../../components/ProgressBar';
 import SurveySubTitle from '../../../components/SurveySubTitle';
 import SurveyTitle from '../../../components/SurveyTitle';
+import modalAtom from '../../../recoil/modalAtom';
 import {
   PointButtonContainer,
   SurveyPointImg,
@@ -14,6 +16,11 @@ import {
 
 const SurveyJob = () => {
   const path = '/survey/market';
+  const setModal = useSetRecoilState(modalAtom);
+
+  useEffect(() => {
+    setModal('Middle');
+  }, []);
   return (
     <>
       <Progress percent={60} />

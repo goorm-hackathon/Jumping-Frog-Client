@@ -5,7 +5,13 @@ import modalAtom from '../recoil/modalAtom';
 import { useSetRecoilState } from 'recoil';
 import { useNavigate } from 'react-router-dom';
 
-const Modal = ({ children }: { children: React.ReactNode }) => {
+const Modal = ({
+  children,
+  timeout,
+}: {
+  children: React.ReactNode;
+  timeout?: number;
+}) => {
   const navigate = useNavigate();
   const setModalState = useSetRecoilState(modalAtom);
 
@@ -26,11 +32,20 @@ const Modal = ({ children }: { children: React.ReactNode }) => {
     };
   }, []);
 
+  // 모달 자동 제거
+  useEffect(() => {
+    setTimeout(() => {
+      setModalState(null);
+    }, timeout);
+  }, [timeout]);
+
   return (
     <ModalContainer>
       <DialogBox>
         <FormContainer>{children}</FormContainer>
-        <CompleteButton onClick={handleHomeClick}>홈으로 이동</CompleteButton>
+        {!timeout && (
+          <CompleteButton onClick={handleHomeClick}>홈으로 이동</CompleteButton>
+        )}
       </DialogBox>
       <Backdrop onClick={handleModalClick} />
     </ModalContainer>
