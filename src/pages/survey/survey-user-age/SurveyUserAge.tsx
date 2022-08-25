@@ -28,9 +28,9 @@ const SurveyUserAge = () => {
         path={path}
       />
       <Card
-        isSelected={selectedAge === '대학 재학생'}
+        isSelected={selectedAge === '대학생'}
         name="age"
-        content="대학 재학중"
+        content="대학생"
         path={path}
       />
       <Card
