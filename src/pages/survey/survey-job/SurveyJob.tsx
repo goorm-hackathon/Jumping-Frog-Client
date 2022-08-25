@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
-import { useSetRecoilState } from 'recoil';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
 import PointButton from '../../../components/PointButton';
 import Progress from '../../../components/ProgressBar';
 import SurveySubTitle from '../../../components/SurveySubTitle';
 import SurveyTitle from '../../../components/SurveyTitle';
 import modalAtom from '../../../recoil/modalAtom';
+import userAtom from '../../../recoil/userAtom';
 import {
   PointButtonContainer,
   SurveyPointImg,
@@ -16,6 +17,7 @@ import {
 
 const SurveyJob = () => {
   const path = '/survey/market';
+  const userData = useRecoilValue(userAtom);
   const setModal = useSetRecoilState(modalAtom);
 
   useEffect(() => {
@@ -37,11 +39,36 @@ const SurveyJob = () => {
         />
       </SurveyPointImgContainer>
       <PointButtonContainer>
-        <PointButton name="surveyOne" point="1" path={path} />
-        <PointButton name="surveyOne" point="2" path={path} />
-        <PointButton name="surveyOne" point="3" path={path} />
-        <PointButton name="surveyOne" point="4" path={path} />
-        <PointButton name="surveyOne" point="5" path={path} />
+        <PointButton
+          isSelected={userData.surveyOne === 1}
+          name="surveyOne"
+          point="1"
+          path={path}
+        />
+        <PointButton
+          isSelected={userData.surveyOne === 2}
+          name="surveyOne"
+          point="2"
+          path={path}
+        />
+        <PointButton
+          isSelected={userData.surveyOne === 3}
+          name="surveyOne"
+          point="3"
+          path={path}
+        />
+        <PointButton
+          isSelected={userData.surveyOne === 4}
+          name="surveyOne"
+          point="4"
+          path={path}
+        />
+        <PointButton
+          isSelected={userData.surveyOne === 5}
+          name="surveyOne"
+          point="5"
+          path={path}
+        />
       </PointButtonContainer>
     </>
   );

@@ -1,12 +1,15 @@
 import React from 'react';
+import { useRecoilValue } from 'recoil';
 import styled from 'styled-components';
 import PointButton from '../../../components/PointButton';
 import Progress from '../../../components/ProgressBar';
 import SurveySubTitle from '../../../components/SurveySubTitle';
 import SurveyTitle from '../../../components/SurveyTitle';
+import userAtom from '../../../recoil/userAtom';
 
 const SurveyMarket = () => {
   const path = '/register';
+  const userData = useRecoilValue(userAtom);
   return (
     <>
       <Progress percent={80} />
@@ -23,11 +26,36 @@ const SurveyMarket = () => {
         />
       </SurveyPointImgContainer>
       <PointButtonContainer>
-        <PointButton name="surveyTwo" point="1" path={path} />
-        <PointButton name="surveyTwo" point="2" path={path} />
-        <PointButton name="surveyTwo" point="3" path={path} />
-        <PointButton name="surveyTwo" point="4" path={path} />
-        <PointButton name="surveyTwo" point="5" path={path} />
+        <PointButton
+          isSelected={userData.surveyTwo === 1}
+          name="surveyTwo"
+          point="1"
+          path={path}
+        />
+        <PointButton
+          isSelected={userData.surveyTwo === 2}
+          name="surveyTwo"
+          point="2"
+          path={path}
+        />
+        <PointButton
+          isSelected={userData.surveyTwo === 3}
+          name="surveyTwo"
+          point="3"
+          path={path}
+        />
+        <PointButton
+          isSelected={userData.surveyTwo === 4}
+          name="surveyTwo"
+          point="4"
+          path={path}
+        />
+        <PointButton
+          isSelected={userData.surveyTwo === 5}
+          name="surveyTwo"
+          point="5"
+          path={path}
+        />
       </PointButtonContainer>
     </>
   );

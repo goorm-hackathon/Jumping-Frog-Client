@@ -5,10 +5,12 @@ import styled from 'styled-components';
 import userAtom from '../recoil/userAtom';
 
 const PointButton = ({
+  isSelected,
   point,
   path,
   name,
 }: {
+  isSelected: boolean;
   point: string;
   path: string;
   name: string;
@@ -25,7 +27,12 @@ const PointButton = ({
     navigate(path);
   };
   return (
-    <SurveyPointButton onClick={handleClick} name={name} value={point}>
+    <SurveyPointButton
+      isSelected={isSelected}
+      onClick={handleClick}
+      name={name}
+      value={point}
+    >
       {point}
     </SurveyPointButton>
   );
@@ -33,11 +40,13 @@ const PointButton = ({
 
 export default PointButton;
 
-const SurveyPointButton = styled.button`
+const SurveyPointButton = styled.button<{ isSelected: boolean }>`
   text-align: center;
   width: 62px;
   height: 55px;
-  background-color: #f6f4ee;
+  background-color: ${(props) =>
+    props.isSelected ? props.theme.mainColor : 'inherit'};
+  color: ${(props) => (props.isSelected ? 'white' : 'inherit')};
   border: 2px solid rgb(246, 244, 238);
   opacity: 40%;
   font-weight: 600;
