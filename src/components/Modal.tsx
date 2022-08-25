@@ -22,7 +22,7 @@ const Modal = ({
 
   const handleHomeClick = (e: MouseEvent) => {
     setModalState(null);
-    navigate('/');
+    navigate('/information');
   };
 
   useEffect(() => {
@@ -46,7 +46,7 @@ const Modal = ({
       <DialogBox>
         <FormContainer>{children}</FormContainer>
         {!timeout && (
-          <CompleteButton onClick={handleHomeClick}>홈으로 이동</CompleteButton>
+          <CompleteButton onClick={handleHomeClick}>더 알아보기</CompleteButton>
         )}
       </DialogBox>
       <Backdrop onClick={handleModalClick} />

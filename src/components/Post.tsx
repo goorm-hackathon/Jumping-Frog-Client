@@ -21,8 +21,8 @@ const Post = ({ data }: { data: IPostProps }) => {
         <JobTitle>{jobName}</JobTitle>
         <Divider />
         <JobDescription>
-          {jobSummary.length > 40
-            ? `${jobSummary.slice(0, 40)}...`
+          {jobSummary.length > 50
+            ? `${jobSummary.slice(0, 50)}...`
             : jobSummary}
         </JobDescription>
       </JobContainer>

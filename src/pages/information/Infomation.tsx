@@ -55,5 +55,5 @@ const Information = () => {
 export default Information;
 
 const Container = styled.div`
-  padding: 10px;
+  padding: 5px;
 `;
