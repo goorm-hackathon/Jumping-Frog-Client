@@ -5,6 +5,7 @@ import { useRecoilValue } from 'recoil';
 
 import Modal from '../components/Modal';
 import ModalContent from '../pages/register/ModalContent';
+import ModalMidContent from '../components/ModalMidContent';
 
 export default function useModal() {
   const getModalPage = () => {
@@ -16,6 +17,12 @@ export default function useModal() {
         return (
           <Modal>
             <ModalContent />
+          </Modal>
+        );
+      case 'Middle':
+        return (
+          <Modal timeout={3000}>
+            <ModalMidContent />
           </Modal>
         );
       default:
