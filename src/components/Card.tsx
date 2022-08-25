@@ -5,10 +5,12 @@ import { useRecoilState } from 'recoil';
 import userAtom from '../recoil/userAtom';
 
 const Card = ({
+  isSelected,
   name,
   content,
   path,
 }: {
+  isSelected: boolean;
   name: string;
   content: string;
   path: string;
@@ -28,7 +30,12 @@ const Card = ({
 
   return (
     <CardContainer>
-      <CardBtn onClick={handleClick} value={content} name={name}>
+      <CardBtn
+        isSelected={isSelected}
+        onClick={handleClick}
+        value={content}
+        name={name}
+      >
         {content}
       </CardBtn>
     </CardContainer>
@@ -41,14 +48,16 @@ const CardContainer = styled.div`
   text-align: center;
 `;
 
-const CardBtn = styled.button`
+const CardBtn = styled.button<{ isSelected: boolean }>`
   width: 343px;
   height: 60px;
   text-align: center;
   margin-top: 20px;
   font-size: 15px;
-  background-color: rgb(246, 244, 238);
+  background-color: ${(props) =>
+    props.isSelected ? props.theme.mainColor : 'inherit'};
   border: 2px solid rgb(246, 244, 238);
+  color: ${(props) => (props.isSelected ? 'white' : 'inherit')};
   opacity: 40%;
   font-weight: 600;
   cursor: pointer;
