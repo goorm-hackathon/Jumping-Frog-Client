@@ -11,12 +11,15 @@ const Main = () => {
   return (
     <MainWrapper>
       <MainImgContainer>
-        <img src="sample.png" alt="샘플" />
+        <img src={require('../../assets/images/logo.png')} alt="샘플" />
       </MainImgContainer>
       <MainLogoContainer>
         <img src="logo.png" alt="로고" />
       </MainLogoContainer>
-      <MainTitle>예시용 워딩 한문장 블라블라</MainTitle>
+      <MainTitle>
+        10대 제주도민을 위한 맞춤형 <br />
+        커리어 성장 뉴스레터 서비스
+      </MainTitle>
       <MainSubTitle>
         여기에 워딩이 3~4줄 적으면 괜찮 <br />
         여기에 워딩이 3~4줄 적으면 괜찮 <br />
