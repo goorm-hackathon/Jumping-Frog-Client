@@ -2,27 +2,40 @@ import React from 'react';
 import styled from 'styled-components';
 
 interface IPostProps {
-  imgUrl: string;
+  createdAt: string;
+  imageUrl: string;
+  isSent: boolean;
+  jobCode: string;
+  jobLink: string;
   jobName: string;
   jobSummary: string;
-  jobLink: string;
+  jobVideo: string;
+  updatedAt: string;
+  __v: number;
+  _id: string;
 }
 const Post = ({ data }: { data: IPostProps }) => {
-  const { imgUrl, jobName, jobSummary, jobLink } = data;
-  const handleClick = () => {
-    console.log(jobLink, '로 이동');
+  const { imageUrl, jobName, jobSummary, jobVideo, jobLink } = data;
+
+  const handleImageClick = () => {
+    location.href = jobVideo;
   };
+
+  const handleTitleClick = () => {
+    location.href = jobLink;
+  };
+
   return (
-    <Container onClick={handleClick}>
-      <ImageContainer>
-        <Image src={imgUrl}></Image>
+    <Container>
+      <ImageContainer onClick={handleImageClick}>
+        <Image src={imageUrl}></Image>
       </ImageContainer>
       <JobContainer>
-        <JobTitle>{jobName}</JobTitle>
+        <JobTitle onClick={handleTitleClick}>{jobName}</JobTitle>
         <Divider />
         <JobDescription>
-          {jobSummary.length > 50
-            ? `${jobSummary.slice(0, 50)}...`
+          {jobSummary.length > 70
+            ? `${jobSummary.slice(0, 70)}...`
             : jobSummary}
         </JobDescription>
       </JobContainer>
@@ -40,15 +53,14 @@ const Container = styled.div`
   align-items: center;
   border-radius: 10px;
   cursor: pointer;
-
-  &:hover {
-    transform: scale(1.05);
-    transition: 0.1s ease-in-out all;
-  }
 `;
 
 const ImageContainer = styled.div`
   margin-left: 10px;
+  &:hover {
+    transform: scale(1.05);
+    transition: 0.1s ease-in-out all;
+  }
 `;
 
 const Image = styled.img`
@@ -61,7 +73,12 @@ const JobContainer = styled.div`
   height: 100px;
 `;
 
-const JobTitle = styled.div``;
+const JobTitle = styled.div`
+  &:hover {
+    transform: scale(1.05);
+    transition: 0.1s ease-in-out all;
+  }
+`;
 
 const Divider = styled.hr`
   border-top: 1.5px solid #bbb;
