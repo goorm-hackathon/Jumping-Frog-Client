@@ -1,5 +1,6 @@
 import React from 'react';
 import PointButton from '../../../components/PointButton';
+import Progress from '../../../components/ProgressBar';
 import SurveySubTitle from '../../../components/SurveySubTitle';
 import SurveyTitle from '../../../components/SurveyTitle';
 import {
@@ -14,6 +15,7 @@ import {
 const SurveyJob = () => {
   return (
     <>
+      <Progress percent={60} />
       <SurveyTitle content="당신의 성향을 체크해주세요." />
       <SurveySubTitle content="나는 현재 다양한 직업에 대해 알고 있다고 느껴요" />
       <SurveyPointOpinionContainer>
