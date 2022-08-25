@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
 import Layout from './components/Layout';
+import useModal from './hooks/useModal';
 import End from './pages/end/End';
 import Main from './pages/main/Main';
 import Register from './pages/register/Register';
@@ -12,6 +12,7 @@ import SurveyUserAge from './pages/survey/survey-user-age/SurveyUserAge';
 import SurveyUserGender from './pages/survey/survey-user-gender/SurveyUserGender';
 
 function App() {
+  const [getModalPage] = useModal();
   return (
     <Router>
       <Routes>
@@ -26,6 +27,7 @@ function App() {
           <Route path="/end" element={<End />} />
         </Route>
       </Routes>
+      {getModalPage()}
     </Router>
   );
 }
