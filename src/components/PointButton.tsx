@@ -45,7 +45,7 @@ const SurveyPointButton = styled.button<{ isSelected: boolean }>`
   width: 62px;
   height: 55px;
   background-color: ${(props) =>
-    props.isSelected ? props.theme.mainColor : 'inherit'};
+    props.isSelected ? props.theme.mainColor : '#efe6c9'};
   color: ${(props) => (props.isSelected ? 'white' : 'inherit')};
   border: 2px solid rgb(246, 244, 238);
   opacity: 40%;
@@ -54,5 +54,7 @@ const SurveyPointButton = styled.button<{ isSelected: boolean }>`
   border-radius: 12px;
   &:hover {
     background-color: gray;
+    transform: scale(1.15);
+    transition: 0.1s ease-in-out all;
   }
 `;

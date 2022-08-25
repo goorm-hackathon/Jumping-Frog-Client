@@ -88,7 +88,7 @@ const SurveyInterestButton = styled.input`
 
 const SurveyInterestButtonContainer = styled.div`
   display: flex;
-  background-color: #f6f4ee;
+  background-color: #efe6c9;
   border: 2px solid rgb(246, 244, 238);
   opacity: 40%;
   font-weight: 600;
