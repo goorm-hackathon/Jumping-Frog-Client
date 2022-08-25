@@ -34,29 +34,29 @@ const SurveyMarket = () => {
 
 export default SurveyMarket;
 
-const PointButtonContainer = styled.div`
+export const PointButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 24px;
 `;
 
-const SurveyPointOpinionContainer = styled.div`
+export const SurveyPointOpinionContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 24px;
 `;
-const SurveyPointOpinionNo = styled.span`
+export const SurveyPointOpinionNo = styled.span`
   color: #191717;
   opacity: 60%;
   font-size: 7px;
 `;
-const SurveyPointOpinionYes = styled.span`
+export const SurveyPointOpinionYes = styled.span`
   color: #191717;
   opacity: 60%;
   font-size: 7px;
 `;
 
-const SurveyPointImgContainer = styled.div``;
-const SurveyPointImg = styled.img`
+export const SurveyPointImgContainer = styled.div``;
+export const SurveyPointImg = styled.img`
   width: 100%;
 `;
