@@ -4,7 +4,7 @@ import modalAtom from '../recoil/modalAtom';
 import { useRecoilValue } from 'recoil';
 
 import Modal from '../components/Modal';
-import End from '../pages/end/End';
+import ModalContent from '../pages/register/ModalContent';
 
 export default function useModal() {
   const getModalPage = () => {
@@ -15,7 +15,7 @@ export default function useModal() {
       case 'End':
         return (
           <Modal>
-            <End />
+            <ModalContent />
           </Modal>
         );
       default:
