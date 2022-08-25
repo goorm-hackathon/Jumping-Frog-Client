@@ -11,7 +11,7 @@ type UserTypes = {
   name: string;
   gender: string;
   email: string;
-  interests: string[];
+  interests: number[];
   surveyOne: number;
   surveyTwo: number;
 };

@@ -16,15 +16,16 @@ const SurveyInteresting = () => {
 
   const handleClick = () => {
     //TODO: item이 true이면 index를 넣어준 배열을 만든다.
-    const indexChecked = isChecked.filter((item, index) => {
-      return item == true && index;
+
+    const newArr: number[] = [];
+    isChecked.forEach((v, i) => {
+      if (v) newArr.push(i + 1);
     });
 
-    // setUserData({
-    //   ...userData,
-    //   interests: [],
-    // });
-    console.log(indexChecked);
+    setUserData({
+      ...userData,
+      interests: newArr,
+    });
 
     navigate('/survey/job');
   };
