@@ -22,7 +22,7 @@ const PR = styled.progress`
   appearance: none;
 
   &::-webkit-progress-bar {
-    height: 20px;
+    height: 14px;
     background-color: #f6f4ee;
     border-radius: 20px;
   }
