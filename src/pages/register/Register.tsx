@@ -7,6 +7,7 @@ import { useRecoilState, useResetRecoilState, useSetRecoilState } from 'recoil';
 import modalAtom from '../../recoil/modalAtom';
 import userAtom from '../../recoil/userAtom';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 interface IForm {
   name: string;
@@ -22,17 +23,15 @@ const Register = () => {
   const setModal = useSetRecoilState(modalAtom);
   const [userData, setUserData] = useRecoilState(userAtom);
   const resetUserData = useResetRecoilState(userAtom);
+  const navigate = useNavigate();
 
   interface IUserProps {
     name: string;
     email: string;
   }
 
-  // TODO: 전역에 저장된 Survey 데이터를 불러와서 입력 받은 데이터를 합쳐 POST 요청
   const onVaild = async (data: IUserProps) => {
     const { name, email } = data;
-
-    setModal('End');
 
     setUserData({
       ...userData,
@@ -54,23 +53,23 @@ const Register = () => {
       email: data.email,
       name: data.name,
     };
-
-    const response = await axios.post(
-      `${process.env.REACT_APP_API_URL}/subscribe`,
-      postData,
-      {
-        headers: {
-          'Content-Type': 'application/json',
+    try {
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_URL}/subscribe`,
+        postData,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
         },
-      },
-    );
-
-    if (response.status !== 201) {
-      alert('등록에 문제가 발생했습니다. 다시 시도해주세요:(');
-      return;
+      );
+      console.log(response);
+      setModal('End');
+    } catch (e: any) {
+      alert(e.message);
+      navigate('/');
     }
 
-    console.log(response);
     // POST 후 local storage 및 전역 데이터 비우기
     localStorage.removeItem('JumpingFrogUserData');
     resetUserData();
