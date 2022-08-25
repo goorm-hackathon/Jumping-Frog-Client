@@ -11,6 +11,16 @@ const SurveyMarket = () => {
       <Progress percent={80} />
       <SurveyTitle content="당신의 성향을 체크해주세요." />
       <SurveySubTitle content="나는 현재 제주도에 취업시장이 다양한 직업군에 접근할 수 있도록 활성화 되어 있다고 생각해요" />
+      <SurveyPointOpinionContainer>
+        <SurveyPointOpinionNo>전혀 그렇지 않다.</SurveyPointOpinionNo>
+        <SurveyPointOpinionYes>매우 그렇다.</SurveyPointOpinionYes>
+      </SurveyPointOpinionContainer>
+      <SurveyPointImgContainer>
+        <SurveyPointImg
+          src={require('../../../assets/images/rectangle.png')}
+          alt="로고"
+        />
+      </SurveyPointImgContainer>
       <PointButtonContainer>
         <PointButton point="1" />
         <PointButton point="2" />
@@ -27,4 +37,26 @@ export default SurveyMarket;
 const PointButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-top: 24px;
+`;
+
+const SurveyPointOpinionContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+`;
+const SurveyPointOpinionNo = styled.span`
+  color: #191717;
+  opacity: 60%;
+  font-size: 7px;
+`;
+const SurveyPointOpinionYes = styled.span`
+  color: #191717;
+  opacity: 60%;
+  font-size: 7px;
+`;
+
+const SurveyPointImgContainer = styled.div``;
+const SurveyPointImg = styled.img`
+  width: 100%;
 `;
