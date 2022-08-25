@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import { useForm } from 'react-hook-form';
 import { regEmail } from '../../utils/regex';
 import Progress from '../../components/ProgressBar';
-import { useSetRecoilState } from 'recoil';
+import { useRecoilState, useSetRecoilState } from 'recoil';
 import modalAtom from '../../recoil/modalAtom';
+import userAtom from '../../recoil/userAtom';
 
 interface IForm {
   name: string;
@@ -18,11 +19,23 @@ const Register = () => {
     formState: { errors },
   } = useForm<IForm>();
   const setModal = useSetRecoilState(modalAtom);
+  const [userData, setUserData] = useRecoilState(userAtom);
 
+  interface IUserProps {
+    name: string;
+    email: string;
+  }
   // TODO: 전역에 저장된 Survey 데이터를 불러와서 입력 받은 데이터를 합쳐 POST 요청
-  const onVaild = (data: any) => {
+  const onVaild = (data: IUserProps) => {
     console.log(data);
+    const { name, email } = data;
     setModal('End');
+    setUserData({
+      ...userData,
+      name,
+      email,
+    });
+    console.log(userData);
   };
 
   return (
@@ -50,7 +63,7 @@ const Register = () => {
             },
           })}
         ></Input>
-        <ErrorMessage>{errors?.name?.message}</ErrorMessage>
+        <ErrorMessage>{errors?.email?.message}</ErrorMessage>
         <SubmitButton>제출하기</SubmitButton>
       </Form>
     </Container>
