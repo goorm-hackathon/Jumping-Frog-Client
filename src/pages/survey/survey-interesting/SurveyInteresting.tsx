@@ -15,8 +15,6 @@ const SurveyInteresting = () => {
   );
 
   const handleClick = () => {
-    //TODO: item이 true이면 index를 넣어준 배열을 만든다.
-
     const newArr: number[] = [];
     isChecked.forEach((v, i) => {
       if (v) newArr.push(i + 1);

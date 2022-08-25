@@ -16,7 +16,7 @@ interface IPostProps {
 }
 const Post = ({ data }: { data: IPostProps }) => {
   const { imageUrl, jobName, jobSummary, jobVideo, jobLink } = data;
-
+  console.log(imageUrl);
   const handleImageClick = () => {
     location.href = jobVideo;
   };

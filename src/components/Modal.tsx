@@ -20,7 +20,7 @@ const Modal = ({
     setModalState(null);
   }, []);
 
-  const handleHomeClick = (e: MouseEvent) => {
+  const handleHomeClick = () => {
     setModalState(null);
     navigate('/information');
   };

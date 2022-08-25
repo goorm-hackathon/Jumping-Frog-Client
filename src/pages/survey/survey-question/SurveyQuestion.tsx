@@ -14,7 +14,6 @@ import {
   SurveyPointOpinionYes,
 } from '../survey-market/SurveyMarket';
 
-// TODO: 데이터 수정해야함!
 const SurveyQuestion = () => {
   const path = '/survey/question2';
   const [userData, setUserdata] = useRecoilState(userAtom);

@@ -5,7 +5,6 @@ import Post from '../../components/Post';
 
 const Information = () => {
   const [jobData, setJobData] = useState([]);
-
   // GET 전체 데이터
   const getDataFromApi = async () => {
     const response = await axios.get(`${process.env.REACT_APP_API_URL}/jobs`);
