@@ -1,33 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
-import { useRecoilState, useResetRecoilState } from 'recoil';
+import { useRecoilState } from 'recoil';
 import userAtom from '../recoil/userAtom';
 
 const Card = ({
-  flag,
+  name,
   content,
   path,
 }: {
-  flag: string;
+  name: string;
   content: string;
   path: string;
 }) => {
   const navigate = useNavigate();
   const [userData, setUserData] = useRecoilState(userAtom);
   const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    const { value } = e.currentTarget;
+    const { value, name } = e.currentTarget;
+
     setUserData({
       ...userData,
-      flag: value,
+      [name]: value,
     });
+
     navigate(path);
   };
-  console.log(userData);
 
   return (
     <CardContainer>
-      <CardBtn onClick={handleClick} value={content}>
+      <CardBtn onClick={handleClick} value={content} name={name}>
         {content}
       </CardBtn>
     </CardContainer>

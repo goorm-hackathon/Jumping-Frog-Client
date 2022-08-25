@@ -7,7 +7,6 @@ const { persistAtom } = recoilPersist({
 });
 
 type UserTypes = {
-  flag: string;
   age: string;
   name: string;
   gender: string;
@@ -20,7 +19,6 @@ type UserTypes = {
 const userAtom = atom<UserTypes>({
   key: 'userAtom', // 해당 atom의 고유 key
   default: {
-    flag: '',
     age: '',
     name: '',
     gender: '',
