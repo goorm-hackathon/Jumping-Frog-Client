@@ -14,6 +14,8 @@ type UserTypes = {
   interests: number[];
   surveyOne: number;
   surveyTwo: number;
+  surveyThree: number;
+  surveyFour: number;
 };
 
 const userAtom = atom<UserTypes>({
@@ -26,6 +28,8 @@ const userAtom = atom<UserTypes>({
     interests: [],
     surveyOne: 0,
     surveyTwo: 0,
+    surveyThree: 0,
+    surveyFour: 0,
   }, // 기본값
   effects_UNSTABLE: [persistAtom],
 });

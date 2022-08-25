@@ -11,7 +11,7 @@ const SurveyUserGender = () => {
   const selectedGender = userData.gender;
   return (
     <>
-      <Progress percent={20} />
+      <Progress percent={14} />
       <SurveyTitle content="성별을 입력해주세요" />
       <Card
         isSelected={selectedGender === '남자'}

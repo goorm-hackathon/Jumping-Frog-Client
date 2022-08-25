@@ -10,6 +10,8 @@ import Register from './pages/register/Register';
 import SurveyInteresting from './pages/survey/survey-interesting/SurveyInteresting';
 import SurveyJob from './pages/survey/survey-job/SurveyJob';
 import SurveyMarket from './pages/survey/survey-market/SurveyMarket';
+import SurveyQuestion from './pages/survey/survey-question/SurveyQuestion';
+import SurveyQuestion2 from './pages/survey/survey-question2/SurveyQuestion2';
 import SurveyUserAge from './pages/survey/survey-user-age/SurveyUserAge';
 import SurveyUserGender from './pages/survey/survey-user-gender/SurveyUserGender';
 
@@ -25,6 +27,8 @@ function App() {
           <Route path="/survey/gender" element={<SurveyUserGender />} />
           <Route path="/survey/interest" element={<SurveyInteresting />} />
           <Route path="/survey/job" element={<SurveyJob />} />
+          <Route path="/survey/question1" element={<SurveyQuestion />} />
+          <Route path="/survey/question2" element={<SurveyQuestion2 />} />
           <Route path="/survey/market" element={<SurveyMarket />} />
           <Route path="/register" element={<Register />} />
           <Route path="/information" element={<Information />} />

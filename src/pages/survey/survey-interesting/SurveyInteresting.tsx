@@ -39,7 +39,7 @@ const SurveyInteresting = () => {
   };
   return (
     <>
-      <Progress percent={40} />
+      <Progress percent={28} />
       <SurveyTitle content="당신의 관심사를 체크해주세요." />
       {surveyCheckContents.map((item: string, index: number) => {
         return (
