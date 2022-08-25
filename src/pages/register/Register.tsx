@@ -67,6 +67,7 @@ const Register = () => {
 
     if (response.status !== 201) {
       alert('등록에 문제가 발생했습니다. 다시 시도해주세요:(');
+      return;
     }
 
     console.log(response);
