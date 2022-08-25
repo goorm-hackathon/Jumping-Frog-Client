@@ -7,7 +7,7 @@ const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       navigate('/main');
-    }, 3000);
+    }, 900);
   });
   return (
     <HomeContainer>
