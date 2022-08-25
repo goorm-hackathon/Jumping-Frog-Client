@@ -12,12 +12,13 @@ const Header = () => {
 
   return (
     <Container>
-      <MdKeyboardBackspace
-        onClick={handleBackspace}
-        size={30}
-        style={{ marginRight: '26%' }}
-      />
-      <Title>Jumping Frog</Title>
+      <MdKeyboardBackspace onClick={handleBackspace} size={30} />
+      <HeaderLogoContainer>
+        <HeaderLogo
+          src={require('../assets/images/surveyLogo.png')}
+          alt="로고"
+        />
+      </HeaderLogoContainer>
     </Container>
   );
 };
@@ -32,7 +33,8 @@ const Container = styled.div`
   height: 50px;
 `;
 
-const Title = styled.span`
-  font-size: 24px;
-  font-family: 'Ab';
+const HeaderLogo = styled.img``;
+const HeaderLogoContainer = styled.div`
+  margin: 0 auto;
+  padding-right: 10px;
 `;
