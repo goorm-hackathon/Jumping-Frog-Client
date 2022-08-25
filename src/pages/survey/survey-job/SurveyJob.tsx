@@ -13,6 +13,7 @@ import {
 } from '../survey-market/SurveyMarket';
 
 const SurveyJob = () => {
+  const path = '/survey/market';
   return (
     <>
       <Progress percent={60} />
@@ -29,11 +30,11 @@ const SurveyJob = () => {
         />
       </SurveyPointImgContainer>
       <PointButtonContainer>
-        <PointButton point="1" />
-        <PointButton point="2" />
-        <PointButton point="3" />
-        <PointButton point="4" />
-        <PointButton point="5" />
+        <PointButton point="1" path={path} />
+        <PointButton point="2" path={path} />
+        <PointButton point="3" path={path} />
+        <PointButton point="4" path={path} />
+        <PointButton point="5" path={path} />
       </PointButtonContainer>
     </>
   );

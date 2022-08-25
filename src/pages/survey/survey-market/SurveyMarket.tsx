@@ -6,6 +6,7 @@ import SurveySubTitle from '../../../components/SurveySubTitle';
 import SurveyTitle from '../../../components/SurveyTitle';
 
 const SurveyMarket = () => {
+  const path = '/register';
   return (
     <>
       <Progress percent={80} />
@@ -22,11 +23,11 @@ const SurveyMarket = () => {
         />
       </SurveyPointImgContainer>
       <PointButtonContainer>
-        <PointButton point="1" />
-        <PointButton point="2" />
-        <PointButton point="3" />
-        <PointButton point="4" />
-        <PointButton point="5" />
+        <PointButton point="1" path={path} />
+        <PointButton point="2" path={path} />
+        <PointButton point="3" path={path} />
+        <PointButton point="4" path={path} />
+        <PointButton point="5" path={path} />
       </PointButtonContainer>
     </>
   );

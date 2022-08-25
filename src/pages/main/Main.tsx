@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const Main = () => {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate('/register');
+    navigate('/survey/age');
   };
   return (
     <MainWrapper>
@@ -50,6 +50,10 @@ const MainNextButton = styled.button`
   background-color: rgb(251, 81, 59);
   color: rgb(255, 255, 255);
   min-height: 60px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.85;
+  }
 `;
 const MainNextContainer = styled.div`
   display: flex;

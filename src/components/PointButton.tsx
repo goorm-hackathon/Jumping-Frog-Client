@@ -1,8 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
-const PointButton = ({ point }: { point: string }) => {
-  return <SurveyPointButton>{point}</SurveyPointButton>;
+const PointButton = ({ point, path }: { point: string; path: string }) => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(path);
+  };
+  return <SurveyPointButton onClick={handleClick}>{point}</SurveyPointButton>;
 };
 
 export default PointButton;
