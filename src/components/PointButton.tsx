@@ -1,13 +1,34 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useRecoilState } from 'recoil';
 import styled from 'styled-components';
+import userAtom from '../recoil/userAtom';
 
-const PointButton = ({ point, path }: { point: string; path: string }) => {
+const PointButton = ({
+  point,
+  path,
+  name,
+}: {
+  point: string;
+  path: string;
+  name: string;
+}) => {
   const navigate = useNavigate();
-  const handleClick = () => {
+  const [userData, setUserData] = useRecoilState(userAtom);
+
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    const { value, name } = e.currentTarget;
+    setUserData({
+      ...userData,
+      [name]: +value,
+    });
     navigate(path);
   };
-  return <SurveyPointButton onClick={handleClick}>{point}</SurveyPointButton>;
+  return (
+    <SurveyPointButton onClick={handleClick} name={name} value={point}>
+      {point}
+    </SurveyPointButton>
+  );
 };
 
 export default PointButton;

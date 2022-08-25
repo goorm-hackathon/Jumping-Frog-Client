@@ -23,11 +23,11 @@ const SurveyMarket = () => {
         />
       </SurveyPointImgContainer>
       <PointButtonContainer>
-        <PointButton point="1" path={path} />
-        <PointButton point="2" path={path} />
-        <PointButton point="3" path={path} />
-        <PointButton point="4" path={path} />
-        <PointButton point="5" path={path} />
+        <PointButton name="surveyTwo" point="1" path={path} />
+        <PointButton name="surveyTwo" point="2" path={path} />
+        <PointButton name="surveyTwo" point="3" path={path} />
+        <PointButton name="surveyTwo" point="4" path={path} />
+        <PointButton name="surveyTwo" point="5" path={path} />
       </PointButtonContainer>
     </>
   );
