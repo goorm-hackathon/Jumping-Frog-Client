@@ -21,7 +21,7 @@ export default function useModal() {
         );
       case 'Middle':
         return (
-          <Modal timeout={3000}>
+          <Modal timeout={2000}>
             <ModalMidContent />
           </Modal>
         );
