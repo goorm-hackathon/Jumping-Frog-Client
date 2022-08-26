@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useForm } from 'react-hook-form';
-import { regEmail } from '../../utils/regex';
+import { regEmail, regName } from '../../utils/regex';
 import Progress from '../../components/ProgressBar';
 import { useRecoilState, useResetRecoilState, useSetRecoilState } from 'recoil';
 import modalAtom from '../../recoil/modalAtom';
@@ -63,16 +63,16 @@ const Register = () => {
           },
         },
       );
-      console.log(response);
+      localStorage.setItem('name', data.name);
       setModal('End');
     } catch (e: any) {
       alert(e.message);
       navigate('/');
+    } finally {
+      // POST 후 local storage 및 전역 데이터 비우기
+      localStorage.removeItem('JumpingFrogUserData');
+      resetUserData();
     }
-
-    // POST 후 local storage 및 전역 데이터 비우기
-    localStorage.removeItem('JumpingFrogUserData');
-    resetUserData();
   };
 
   return (
@@ -83,9 +83,9 @@ const Register = () => {
         <Input
           {...register('name', {
             required: '이름은 꼭 입력해주세요:(',
-            maxLength: {
-              value: 10,
-              message: '이름은 10자를 넘을 수 없어요:(',
+            pattern: {
+              value: regName,
+              message: '이름은 한글 10자 이내로 입력해주세요:(',
             },
           })}
         ></Input>

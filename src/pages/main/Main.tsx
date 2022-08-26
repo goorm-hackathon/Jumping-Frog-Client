@@ -22,7 +22,7 @@ const Main = () => {
       </MainTitle>
       <MainNextContainer>
         <MainNextButton onClick={handleClick} type="button">
-          시작하기
+          구독하기
         </MainNextButton>
       </MainNextContainer>
     </MainWrapper>

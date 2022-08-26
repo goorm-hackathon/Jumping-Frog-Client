@@ -24,9 +24,9 @@ const GlobalStyle = styled.createGlobalStyle`
     font-weight: 700;
   }
   #root {
-    width: 432px;
+    width: 412px;
     margin: 0 auto;
-    padding: 0 16px;
+    /* padding: 0 16px; */
   }
 `;
 

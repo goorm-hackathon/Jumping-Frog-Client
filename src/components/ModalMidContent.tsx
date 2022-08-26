@@ -9,6 +9,7 @@ const H3 = styled.h3`
 
 const P = styled.p`
   opacity: 0.5;
+  font-size: 14px;
 `;
 
 const ModalMidContent = () => {
@@ -18,7 +19,7 @@ const ModalMidContent = () => {
     <>
       <H3>반가워요. 개굴!</H3>
       <P>
-        요즘 제주도의 {userData.age !== '해당 사항 없음' ? userData.age : ''}{' '}
+        요즘 제주의 {userData.age !== '해당 사항 없음' ? userData.age : ''}{' '}
         {userData.gender}들이 가질만한
       </P>
       <P>진로 고민으로 찾아왔어요! 💪</P>
