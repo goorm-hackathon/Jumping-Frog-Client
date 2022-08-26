@@ -34,8 +34,8 @@ const Post = ({ data }: { data: IPostProps }) => {
         <JobTitle onClick={handleTitleClick}>{jobName}</JobTitle>
         <Divider />
         <JobDescription>
-          {jobSummary.length > 70
-            ? `${jobSummary.slice(0, 70)}...`
+          {jobSummary.length > 100
+            ? `${jobSummary.slice(0, 100)}...`
             : jobSummary}
         </JobDescription>
       </JobContainer>
@@ -78,6 +78,7 @@ const JobTitle = styled.div`
     transform: scale(1.05);
     transition: 0.1s ease-in-out all;
   }
+  font-size: 14px;
 `;
 
 const Divider = styled.hr`
@@ -87,4 +88,6 @@ const Divider = styled.hr`
 
 const JobDescription = styled.span`
   margin-bottom: 10px;
+  font-size: 10px;
+  opacity: 0.5;
 `;
