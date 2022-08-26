@@ -13,7 +13,7 @@ const SurveyMarket = () => {
   return (
     <>
       <Progress percent={56} />
-      <SurveyTitle content="당신의 성향을 체크해주세요." />
+      <SurveyTitle content='"아래의 문장에 얼마나 공감하시나요?"' />
       <SurveySubTitle content="나는 현재 제주도에 취업시장이 다양한 직업군에 접근할 수 있도록 활성화 되어 있다고 생각해요" />
       <SurveyPointOpinionContainer>
         <SurveyPointOpinionNo>전혀 그렇지 않다.</SurveyPointOpinionNo>

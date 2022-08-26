@@ -26,7 +26,7 @@ const SurveyJob = () => {
   return (
     <>
       <Progress percent={42} />
-      <SurveyTitle content="당신의 성향을 체크해주세요." />
+      <SurveyTitle content='"아래의 문장에 얼마나 공감하시나요?"' />
       <SurveySubTitle content="나는 현재 다양한 직업에 대해 알고 있다고 느껴요" />
       <SurveyPointOpinionContainer>
         <SurveyPointOpinionNo>전혀 그렇지 않다.</SurveyPointOpinionNo>
